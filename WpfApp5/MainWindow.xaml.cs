@@ -52,6 +52,20 @@ namespace WpfApp5
                 .SetTags(new[] { "fantasy", "adventure", "classic" })
                 .Build();
             Books.AddBook(secondBook);
+
+            var thirdBookBuilder = new BookBuilder();
+            Book thirdbook = bookBuilder
+                .SetTitle("Captain's daughter")
+                .SetAuthor("Pushkin")
+                .SetGenres(new[] { "Roman" })
+                .SetISBN("928-0-500-57498-4")
+                .SetPublicationDate(new DateTime(1954, 7, 29))
+                .SetAnnotation("The story is based on the real events of the peasant war of 1773-1775 led by Emelyan Pugachev.")
+                .SetTags(new[] {"classic" })
+                .Build();
+            Books.AddBook(thirdbook);
+
+
             BookCatalog.ItemsSource = Books.GetCatalog();
         }
 
